@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: urlshorty-deployment
 spec:
-  replicas: 2 # ¡Ejecutemos 2 pods para alta disponibilidad!
+  replicas: 1 # ¡Ejecutemos 2 pods para alta disponibilidad!
   selector:
     matchLabels:
       app: urlshorty
