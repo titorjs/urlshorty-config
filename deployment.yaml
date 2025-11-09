@@ -15,6 +15,6 @@ spec:
       containers:
       - name: urlshorty-container
         # IMPORTANTE: Apunta a la imagen que subiste a Docker Hub
-        image: docker.io/titorjs/urlshorty:v1.0 
+        image: docker.io/titorjs/urlshorty:v1.1 
         ports:
         - containerPort: 8080 # Puerto donde corre Spring Boot
