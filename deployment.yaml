@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: urlshorty-deployment
+spec:
+  replicas: 2 # ¡Ejecutemos 2 pods para alta disponibilidad!
+  selector:
+    matchLabels:
+      app: urlshorty
+  template:
+    metadata:
+      labels:
+        app: urlshorty
+    spec:
+      containers:
+      - name: urlshorty-container
+        # IMPORTANTE: Apunta a la imagen que subiste a Docker Hub
+        image: docker.io/titorjs/urlshorty:v1.0 
+        ports:
+        - containerPort: 8080 # Puerto donde corre Spring Boot
